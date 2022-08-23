@@ -8,6 +8,16 @@ This repo provides  four code samples to edit or use UPTO-based dataset.
   * `ConPatchForBuilding.py`: generate UrbanTile-scale EnergyPlus IDF file.
 
 
+## Main dependencis
+[Geomeppy](https://pypi.org/project/geomeppy/)
+[UWG](https://pypi.org/project/uwg/)
+[OSMnx](https://pypi.org/project/osmnx/)
+[OSMsc](https://pypi.org/project/osmsc/)
+[GeoPandas](https://pypi.org/project/geopandas/)
+
+
+
+
 
 
 
