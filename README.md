@@ -1,5 +1,4 @@
 # UPTO
-UPTO 
 
 This repo provides  four code samples to edit or use UPTO-based dataset.
 
@@ -7,6 +6,8 @@ This repo provides  four code samples to edit or use UPTO-based dataset.
   * `ConPatchForBuilding.py`: construct UrbanPatch individuals for Building objects for a given receptive radius.
   * `GenMicroclimate.py`: generate the UrbanTile-scale microclimate.
   * `ConPatchForBuilding.py`: generate UrbanTile-scale EnergyPlus IDF file.
+
+
 
 
 
