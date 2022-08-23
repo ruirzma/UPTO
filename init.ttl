@@ -1,0 +1,912 @@
+@prefix : <http://www.urbanpatchtopologyontology.org/upto#> .
+@prefix dc: <http://purl.org/NET/dc_owl2dl/elements#> .
+@prefix gp: <http://www.geopatch.org/gp#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@base <http://www.urbanpatchtopologyontology.org/upto> .
+
+<http://www.urbanpatchtopologyontology.org/upto> rdf:type owl:Ontology ;
+                                                  dc:creator "Rui Ma" ;
+                                                  dc:date "2022-08-01" ;
+                                                  rdfs:label "Urban Patch Topology Ontology"@en .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/NET/dc_owl2dl/elements#creator
+dc:creator rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/NET/dc_owl2dl/elements#date
+dc:date rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.urbanpatchtopologyontology.org/upto#containsBuilding
+:containsBuilding rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf :hasSpatialSemantics .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#containsStreet
+:containsStreet rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :hasSpatialSemantics .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#containsTile
+:containsTile rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :hasSpatialSemantics .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#containsVegetation
+:containsVegetation rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf :hasSpatialSemantics .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#hasBuildingType
+:hasBuildingType rdf:type owl:ObjectProperty .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#hasBuilding_Shading_Construction
+:hasBuilding_Shading_Construction rdf:type owl:ObjectProperty ;
+                                  rdfs:subPropertyOf :hasConstruction .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#hasConstruction
+:hasConstruction rdf:type owl:ObjectProperty .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#hasConstructionSet
+:hasConstructionSet rdf:type owl:ObjectProperty .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#hasExterior_Door_Construction
+:hasExterior_Door_Construction rdf:type owl:ObjectProperty ;
+                               rdfs:subPropertyOf :hasConstruction .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#hasExterior_Fixed_Window_Construction
+:hasExterior_Fixed_Window_Construction rdf:type owl:ObjectProperty ;
+                                       rdfs:subPropertyOf :hasConstruction .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#hasExterior_Floor_Construction
+:hasExterior_Floor_Construction rdf:type owl:ObjectProperty ;
+                                rdfs:subPropertyOf :hasConstruction .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#hasExterior_Glass_Door_Construction
+:hasExterior_Glass_Door_Construction rdf:type owl:ObjectProperty ;
+                                     rdfs:subPropertyOf :hasConstruction .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#hasExterior_Operable_Window_Construction
+:hasExterior_Operable_Window_Construction rdf:type owl:ObjectProperty ;
+                                          rdfs:subPropertyOf :hasConstruction .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#hasExterior_Overhead_Door_Construction
+:hasExterior_Overhead_Door_Construction rdf:type owl:ObjectProperty ;
+                                        rdfs:subPropertyOf :hasConstruction .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#hasExterior_Roof_Construction
+:hasExterior_Roof_Construction rdf:type owl:ObjectProperty ;
+                               rdfs:subPropertyOf :hasConstruction .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#hasExterior_Skylight_Construction
+:hasExterior_Skylight_Construction rdf:type owl:ObjectProperty ;
+                                   rdfs:subPropertyOf :hasConstruction .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#hasExterior_Wall_Construction
+:hasExterior_Wall_Construction rdf:type owl:ObjectProperty ;
+                               rdfs:subPropertyOf :hasConstruction .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#hasGround_Contact_Ceiling_Construction
+:hasGround_Contact_Ceiling_Construction rdf:type owl:ObjectProperty ;
+                                        rdfs:subPropertyOf :hasConstruction .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#hasGround_Contact_Door_Construction
+:hasGround_Contact_Door_Construction rdf:type owl:ObjectProperty ;
+                                     rdfs:subPropertyOf :hasConstruction .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#hasGround_Contact_Wall_Construction
+:hasGround_Contact_Wall_Construction rdf:type owl:ObjectProperty ;
+                                     rdfs:subPropertyOf :hasConstruction .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#hasInterior_Ceiling_Construction
+:hasInterior_Ceiling_Construction rdf:type owl:ObjectProperty ;
+                                  rdfs:subPropertyOf :hasConstruction .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#hasInterior_Door_Construction
+:hasInterior_Door_Construction rdf:type owl:ObjectProperty ;
+                               rdfs:subPropertyOf :hasConstruction .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#hasInterior_Fixed_Window_Construction
+:hasInterior_Fixed_Window_Construction rdf:type owl:ObjectProperty ;
+                                       rdfs:subPropertyOf :hasConstruction .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#hasInterior_Floor_Construction
+:hasInterior_Floor_Construction rdf:type owl:ObjectProperty ;
+                                rdfs:subPropertyOf :hasConstruction .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#hasInterior_Operable_Window_Construction
+:hasInterior_Operable_Window_Construction rdf:type owl:ObjectProperty ;
+                                          rdfs:subPropertyOf :hasConstruction .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#hasInterior_Partition_Construction
+:hasInterior_Partition_Construction rdf:type owl:ObjectProperty ;
+                                    rdfs:subPropertyOf :hasConstruction .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#hasInterior_Wall_Construction
+:hasInterior_Wall_Construction rdf:type owl:ObjectProperty ;
+                               rdfs:subPropertyOf :hasConstruction .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#hasLightingStandard
+:hasLightingStandard rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf :hasSpaceStandards .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#hasMaterials
+:hasMaterials rdf:type owl:ObjectProperty .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#hasSite_Shading_Construction
+:hasSite_Shading_Construction rdf:type owl:ObjectProperty ;
+                              rdfs:subPropertyOf :hasConstruction .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#hasSpaceStandards
+:hasSpaceStandards rdf:type owl:ObjectProperty .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#hasSpace_Shading_Construction
+:hasSpace_Shading_Construction rdf:type owl:ObjectProperty ;
+                               rdfs:subPropertyOf :hasConstruction .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#hasSpatialSemantics
+:hasSpatialSemantics rdf:type owl:ObjectProperty .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#hasStreetNeighbor
+:hasStreetNeighbor rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf :hasSpatialSemantics .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#hasTileNeighbor
+:hasTileNeighbor rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf :hasSpatialSemantics .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#hasTubular_Daylight_Diffuser_Construction
+:hasTubular_Daylight_Diffuser_Construction rdf:type owl:ObjectProperty ;
+                                           rdfs:subPropertyOf :hasConstruction .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#hasTubular_Daylight_Dome_Construction
+:hasTubular_Daylight_Dome_Construction rdf:type owl:ObjectProperty ;
+                                       rdfs:subPropertyOf :hasConstruction .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#hasVentilationStandard
+:hasVentilationStandard rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf :hasSpaceStandards .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#hasZoneSetting
+:hasZoneSetting rdf:type owl:ObjectProperty .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#withinPatch
+:withinPatch rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :hasSpatialSemantics .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#withinTile
+:withinTile rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :hasSpatialSemantics .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.urbanpatchtopologyontology.org/upto#hasArea
+:hasArea rdf:type owl:DatatypeProperty ;
+         rdfs:subPropertyOf :hasGeometryParameters .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#hasAvgBuildingArea
+:hasAvgBuildingArea rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf :hasGeometryParameters .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#hasAvgBuildingHeight
+:hasAvgBuildingHeight rdf:type owl:DatatypeProperty ;
+                      rdfs:subPropertyOf :hasGeometryParameters .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#hasAvgBuildingPerimeter
+:hasAvgBuildingPerimeter rdf:type owl:DatatypeProperty ;
+                         rdfs:subPropertyOf :hasGeometryParameters .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#hasBack_Side_Infrared_Hemispherical_Emissivity
+:hasBack_Side_Infrared_Hemispherical_Emissivity rdf:type owl:DatatypeProperty ;
+                                                rdfs:subPropertyOf :hasMaterialParameters .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#hasBack_Side_Solar_Relectance_At_Normal_Incidence
+:hasBack_Side_Solar_Relectance_At_Normal_Incidence rdf:type owl:DatatypeProperty ;
+                                                   rdfs:subPropertyOf :hasMaterialParameters .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#hasBack_Side_Visible_Relectance_At_Normal_Incidence
+:hasBack_Side_Visible_Relectance_At_Normal_Incidence rdf:type owl:DatatypeProperty ;
+                                                     rdfs:subPropertyOf :hasMaterialParameters .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#hasBearings
+:hasBearings rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf :hasGeometryParameters .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#hasBuildingDensity
+:hasBuildingDensity rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf :hasGeometryParameters .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#hasBuildingType
+:hasBuildingType rdf:type owl:DatatypeProperty .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#hasConductivity
+:hasConductivity rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf :hasMaterialParameters .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#hasCoolingSetpointSch
+:hasCoolingSetpointSch rdf:type owl:DatatypeProperty ;
+                       rdfs:subPropertyOf :hasSpaceParameters .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#hasDensity
+:hasDensity rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :hasMaterialParameters .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#hasDirt_Correction_Factor_For_Solar_And_Visible_Transmittance
+:hasDirt_Correction_Factor_For_Solar_And_Visible_Transmittance rdf:type owl:DatatypeProperty ;
+                                                               rdfs:subPropertyOf :hasMaterialParameters .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#hasElecEquipPerArea
+:hasElecEquipPerArea rdf:type owl:DatatypeProperty ;
+                     rdfs:subPropertyOf :hasSpaceParameters .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#hasElecEquipSch
+:hasElecEquipSch rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf :hasSpaceParameters .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#hasFront_Side_Infrared_Hemispherical_Emissivity
+:hasFront_Side_Infrared_Hemispherical_Emissivity rdf:type owl:DatatypeProperty ;
+                                                 rdfs:subPropertyOf :hasMaterialParameters .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#hasFront_Side_Solar_Relectance_At_Normal_Incidence
+:hasFront_Side_Solar_Relectance_At_Normal_Incidence rdf:type owl:DatatypeProperty ;
+                                                    rdfs:subPropertyOf :hasMaterialParameters .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#hasFront_Side_Visible_Relectance_At_Normal_Incidence
+:hasFront_Side_Visible_Relectance_At_Normal_Incidence rdf:type owl:DatatypeProperty ;
+                                                      rdfs:subPropertyOf :hasMaterialParameters .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#hasGasEquipPerArea
+:hasGasEquipPerArea rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf :hasSpaceParameters .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#hasGasEquipSch
+:hasGasEquipSch rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf :hasSpaceParameters .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#hasGeometry
+:hasGeometry rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf :hasGeometryParameters .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#hasGeometryParameters
+:hasGeometryParameters rdf:type owl:DatatypeProperty .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#hasHeatingSetpointSch
+:hasHeatingSetpointSch rdf:type owl:DatatypeProperty ;
+                       rdfs:subPropertyOf :hasSpaceParameters .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#hasHeight
+:hasHeight rdf:type owl:DatatypeProperty ;
+           rdfs:subPropertyOf :hasGeometryParameters .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#hasInfiltrationPerAreaExt
+:hasInfiltrationPerAreaExt rdf:type owl:DatatypeProperty ;
+                           rdfs:subPropertyOf :hasSpaceParameters .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#hasInfiltrationSch
+:hasInfiltrationSch rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf :hasSpaceParameters .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#hasInfrared_Transmittance_At_Normal_Incidence
+:hasInfrared_Transmittance_At_Normal_Incidence rdf:type owl:DatatypeProperty ;
+                                               rdfs:subPropertyOf :hasMaterialParameters .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#hasLightingPriSpcType
+:hasLightingPriSpcType rdf:type owl:DatatypeProperty ;
+                       rdfs:subPropertyOf :hasSpaceParameters .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#hasLightingSch
+:hasLightingSch rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf :hasSpaceParameters .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#hasLightingSecSpcType
+:hasLightingSecSpcType rdf:type owl:DatatypeProperty ;
+                       rdfs:subPropertyOf :hasSpaceParameters .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#hasLightingWPerArea
+:hasLightingWPerArea rdf:type owl:DatatypeProperty ;
+                     rdfs:subPropertyOf :hasSpaceParameters .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#hasLightingWPerPerson
+:hasLightingWPerPerson rdf:type owl:DatatypeProperty ;
+                       rdfs:subPropertyOf :hasSpaceParameters .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#hasMaterialParameters
+:hasMaterialParameters rdf:type owl:DatatypeProperty .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#hasMaterial_Type
+:hasMaterial_Type rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf :hasMaterialParameters .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#hasMccArea
+:hasMccArea rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :hasGeometryParameters .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#hasMrrArea
+:hasMrrArea rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :hasGeometryParameters .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#hasOccupancyActivitySch
+:hasOccupancyActivitySch rdf:type owl:DatatypeProperty ;
+                         rdfs:subPropertyOf :hasSpaceParameters .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#hasOccupancyPerArea
+:hasOccupancyPerArea rdf:type owl:DatatypeProperty ;
+                     rdfs:subPropertyOf :hasSpaceParameters .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#hasOccupancySch
+:hasOccupancySch rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf :hasSpaceParameters .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#hasOptical_Data_Type
+:hasOptical_Data_Type rdf:type owl:DatatypeProperty ;
+                      rdfs:subPropertyOf :hasMaterialParameters .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#hasPerimeter
+:hasPerimeter rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf :hasGeometryParameters .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#hasRGB
+:hasRGB rdf:type owl:DatatypeProperty ;
+        rdfs:subPropertyOf :hasSpaceParameters .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#hasResistance
+:hasResistance rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf :hasMaterialParameters .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#hasRoughness
+:hasRoughness rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf :hasMaterialParameters .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#hasShapeFactor
+:hasShapeFactor rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf :hasGeometryParameters .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#hasSolar_Absorptance
+:hasSolar_Absorptance rdf:type owl:DatatypeProperty ;
+                      rdfs:subPropertyOf :hasMaterialParameters .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#hasSolar_Transmittance_At_Normal_Incidence
+:hasSolar_Transmittance_At_Normal_Incidence rdf:type owl:DatatypeProperty ;
+                                            rdfs:subPropertyOf :hasMaterialParameters .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#hasSpaceParameters
+:hasSpaceParameters rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#hasSpecific_Heat
+:hasSpecific_Heat rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf :hasMaterialParameters .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#hasThermal_Absorptance
+:hasThermal_Absorptance rdf:type owl:DatatypeProperty ;
+                        rdfs:subPropertyOf :hasMaterialParameters .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#hasThickness
+:hasThickness rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf :hasMaterialParameters .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#hasVegetationDensity
+:hasVegetationDensity rdf:type owl:DatatypeProperty ;
+                      rdfs:subPropertyOf :hasGeometryParameters .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#hasVentilationAch
+:hasVentilationAch rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf :hasSpaceParameters .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#hasVentilationPerArea
+:hasVentilationPerArea rdf:type owl:DatatypeProperty ;
+                       rdfs:subPropertyOf :hasSpaceParameters .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#hasVentilationPerPerson
+:hasVentilationPerPerson rdf:type owl:DatatypeProperty ;
+                         rdfs:subPropertyOf :hasSpaceParameters .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#hasVentilationPriSpcType
+:hasVentilationPriSpcType rdf:type owl:DatatypeProperty ;
+                          rdfs:subPropertyOf :hasSpaceParameters .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#hasVentilationSecSpcType
+:hasVentilationSecSpcType rdf:type owl:DatatypeProperty ;
+                          rdfs:subPropertyOf :hasSpaceParameters .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#hasVerticalToHorizontalRatio
+:hasVerticalToHorizontalRatio rdf:type owl:DatatypeProperty ;
+                              rdfs:subPropertyOf :hasGeometryParameters .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#hasVisible_Absorptance
+:hasVisible_Absorptance rdf:type owl:DatatypeProperty ;
+                        rdfs:subPropertyOf :hasMaterialParameters .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#hasVisible_Transmittance_At_Normal_Incidence
+:hasVisible_Transmittance_At_Normal_Incidence rdf:type owl:DatatypeProperty ;
+                                              rdfs:subPropertyOf :hasMaterialParameters .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#hasWaterbodyDensity
+:hasWaterbodyDensity rdf:type owl:DatatypeProperty ;
+                     rdfs:subPropertyOf :hasGeometryParameters .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.urbanpatchtopologyontology.org/upto#Building
+:Building rdf:type owl:Class ;
+          rdfs:subClassOf [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasBuildingType ;
+                            owl:someValuesFrom :BuildingType
+                          ] .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#BuildingType
+:BuildingType rdf:type owl:Class ;
+              rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasConstructionSet ;
+                                owl:someValuesFrom :ConstructionSet
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasZoneSetting ;
+                                owl:someValuesFrom :ThermalZoneSetting
+                              ] .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#Construction
+:Construction rdf:type owl:Class ;
+              rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasMaterials ;
+                                owl:someValuesFrom :Material
+                              ] .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#ConstructionSet
+:ConstructionSet rdf:type owl:Class ;
+                 rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                   owl:onProperty :hasConstruction ;
+                                   owl:someValuesFrom :Construction
+                                 ] .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#Material
+:Material rdf:type owl:Class .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#Standards
+:Standards rdf:type owl:Class .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#Street
+:Street rdf:type owl:Class .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#Templates
+:Templates rdf:type owl:Class .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#ThermalZoneSetting
+:ThermalZoneSetting rdf:type owl:Class .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#UrbanPatch
+:UrbanPatch rdf:type owl:Class .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#UrbanTile
+:UrbanTile rdf:type owl:Class .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#Vegetation
+:Vegetation rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.urbanpatchtopologyontology.org/upto#ASHRAE_189.1-2009
+:ASHRAE_189.1-2009 rdf:type owl:NamedIndividual ,
+                            :Standards .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#ASHRAE_189.1-2009_ExtRoof_IEAD_ClimateZone_2-5
+:ASHRAE_189.1-2009_ExtRoof_IEAD_ClimateZone_2-5 rdf:type owl:NamedIndividual ,
+                                                         :Construction ;
+                                                :hasMaterials :Metal_Decking ,
+                                                              :Roof_Insulation_21 ,
+                                                              :Roof_Membrane .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#ASHRAE_189.1-2009_ExtWall_Mass_ClimateZone_5
+:ASHRAE_189.1-2009_ExtWall_Mass_ClimateZone_5 rdf:type owl:NamedIndividual ,
+                                                       :Construction ;
+                                              :hasMaterials :Wall_Insulation_40 ,
+                                                            <http://www.urbanpatchtopologyontology.org/upto#1IN_Stucco> ,
+                                                            <http://www.urbanpatchtopologyontology.org/upto#1/2IN_Gypsum> ,
+                                                            <http://www.urbanpatchtopologyontology.org/upto#8IN_Concrete_HW> .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#ASHRAE_189.1-2009_ExtWindow_ClimateZone_4-5
+:ASHRAE_189.1-2009_ExtWindow_ClimateZone_4-5 rdf:type owl:NamedIndividual ,
+                                                      :Construction ;
+                                             :hasMaterials :Theoretical_Glass_207 .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#ASHRAE_62.1-1999
+:ASHRAE_62.1-1999 rdf:type owl:NamedIndividual ,
+                           :Standards .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#CP02_CARPET_PAD
+:CP02_CARPET_PAD rdf:type owl:NamedIndividual ,
+                          :Material ;
+                 :hasConductivity "6.2401247"^^xsd:float ;
+                 :hasDensity "0.043699574"^^xsd:float ;
+                 :hasResistance "0.16025321"^^xsd:float ;
+                 :hasRoughness "null"^^xsd:string ;
+                 :hasSolar_Absorptance "0.8"^^xsd:float ;
+                 :hasSpecific_Heat "1.9107672E-4"^^xsd:float ;
+                 :hasThermal_Absorptance "0.9"^^xsd:float ;
+                 :hasThickness "null"^^xsd:string ;
+                 :hasVisible_Absorptance "0.8"^^xsd:float .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#DOE_Ref_2004
+:DOE_Ref_2004 rdf:type owl:NamedIndividual ,
+                       :Templates .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#ExtSlabCarpet_4in_ClimateZone_1-8
+:ExtSlabCarpet_4in_ClimateZone_1-8 rdf:type owl:NamedIndividual ,
+                                            :Construction ;
+                                   :hasMaterials :CP02_CARPET_PAD ,
+                                                 :MAT-CC05_4_HW_CONCRETE .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#Interior_Ceiling
+:Interior_Ceiling rdf:type owl:NamedIndividual ,
+                           :Construction ;
+                  :hasMaterials :M11_100mm_lightweight_concrete .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#Interior_Door
+:Interior_Door rdf:type owl:NamedIndividual ,
+                        :Construction .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#Interior_Floor
+:Interior_Floor rdf:type owl:NamedIndividual ,
+                         :Construction .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#Interior_Partition
+:Interior_Partition rdf:type owl:NamedIndividual ,
+                             :Construction .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#Interior_Wall
+:Interior_Wall rdf:type owl:NamedIndividual ,
+                        :Construction .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#Interior_Window
+:Interior_Window rdf:type owl:NamedIndividual ,
+                          :Construction .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#M11_100mm_lightweight_concrete
+:M11_100mm_lightweight_concrete rdf:type owl:NamedIndividual ,
+                                         :Material ;
+                                :hasConductivity "3.6747005"^^xsd:float ;
+                                :hasDensity "79.90779"^^xsd:float ;
+                                :hasResistance "1.0885124"^^xsd:float ;
+                                :hasRoughness "MediumRough"^^xsd:string ;
+                                :hasSolar_Absorptance "0.5"^^xsd:float ;
+                                :hasThermal_Absorptance "0.9"^^xsd:float ;
+                                :hasThickness "4.0"^^xsd:float ;
+                                :hasVisible_Absorptance "0.5"^^xsd:float .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#MAT-CC05_4_HW_CONCRETE
+:MAT-CC05_4_HW_CONCRETE rdf:type owl:NamedIndividual ,
+                                 :Material ;
+                        :hasConductivity "9.089782"^^xsd:float ;
+                        :hasDensity "139.83864"^^xsd:float ;
+                        :hasResistance "0.4400546"^^xsd:float ;
+                        :hasRoughness "Rough"^^xsd:string ;
+                        :hasSolar_Absorptance "0.85"^^xsd:float ;
+                        :hasSpecific_Heat "0.19986625"^^xsd:float ;
+                        :hasThermal_Absorptance "0.9"^^xsd:float ;
+                        :hasThickness "4.0"^^xsd:float ;
+                        :hasVisible_Absorptance "0.85"^^xsd:float .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#Metal_Decking
+:Metal_Decking rdf:type owl:NamedIndividual ,
+                        :Material ;
+               :hasConductivity "312.04782"^^xsd:float ;
+               :hasDensity "479.44675"^^xsd:float ;
+               :hasResistance "1.892502E-4"^^xsd:float ;
+               :hasRoughness "MediumSmooth"^^xsd:string ;
+               :hasSolar_Absorptance "0.6"^^xsd:float ;
+               :hasSpecific_Heat "0.099933125"^^xsd:float ;
+               :hasThermal_Absorptance "0.9"^^xsd:float ;
+               :hasThickness "0.05905512"^^xsd:float ;
+               :hasVisible_Absorptance "0.6"^^xsd:float .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#Office
+:Office rdf:type owl:NamedIndividual ,
+                 :BuildingType ;
+        :hasZoneSetting :OpenOfficeDefaultZoneSettings .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#OfficeConstructionSets
+:OfficeConstructionSets rdf:type owl:NamedIndividual ,
+                                 :ConstructionSet ;
+                        :hasExterior_Fixed_Window_Construction :ASHRAE_189.1-2009_ExtWindow_ClimateZone_4-5 ;
+                        :hasExterior_Operable_Window_Construction :ASHRAE_189.1-2009_ExtWindow_ClimateZone_4-5 ;
+                        :hasExterior_Roof_Construction :ASHRAE_189.1-2009_ExtRoof_IEAD_ClimateZone_2-5 ;
+                        :hasExterior_Wall_Construction :ASHRAE_189.1-2009_ExtWall_Mass_ClimateZone_5 ;
+                        :hasGround_Contact_Ceiling_Construction :ExtSlabCarpet_4in_ClimateZone_1-8 ;
+                        :hasGround_Contact_Door_Construction :ExtSlabCarpet_4in_ClimateZone_1-8 ;
+                        :hasGround_Contact_Wall_Construction :ExtSlabCarpet_4in_ClimateZone_1-8 ;
+                        :hasInterior_Ceiling_Construction :Interior_Ceiling ;
+                        :hasInterior_Door_Construction :Interior_Door ;
+                        :hasInterior_Fixed_Window_Construction :Interior_Window ;
+                        :hasInterior_Floor_Construction :ExtSlabCarpet_4in_ClimateZone_1-8 ,
+                                                        :Interior_Floor ;
+                        :hasInterior_Operable_Window_Construction :Interior_Window ;
+                        :hasInterior_Partition_Construction :Interior_Partition ;
+                        :hasInterior_Wall_Construction :Interior_Wall ;
+                        :hasTubular_Daylight_Diffuser_Construction :Interior_Window ;
+                        :hasTubular_Daylight_Dome_Construction :Interior_Window .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#OpenOfficeDefaultZoneSettings
+:OpenOfficeDefaultZoneSettings rdf:type owl:NamedIndividual ,
+                                        :ThermalZoneSetting ;
+                               :hasLightingStandard :ASHRAE_189.1-2009 ;
+                               :hasVentilationStandard :ASHRAE_62.1-1999 ;
+                               :hasCoolingSetpointSch "Medium Office ClgStep"^^xsd:string ;
+                               :hasElecEquipPerArea "0.71"^^xsd:float ;
+                               :hasElecEquipSch "Office Bldg Equip"^^xsd:string ;
+                               :hasHeatingSetpointSch "Medium Office Equip"^^xsd:string ;
+                               :hasInfiltrationPerAreaExt "0.0446"^^xsd:float ;
+                               :hasInfiltrationSch "Office Infil Quarter On"^^xsd:string ;
+                               :hasLightingPriSpcType "Office Open Plan"^^xsd:string ;
+                               :hasLightingSch "Office Bldg Light"^^xsd:string ;
+                               :hasLightingSecSpcType "General"^^xsd:string ;
+                               :hasLightingWPerArea "0.99"^^xsd:float ;
+                               :hasOccupancyActivitySch "Office Activity"^^xsd:string ;
+                               :hasOccupancyPerArea "10"^^xsd:int ;
+                               :hasOccupancySch "Office Misc Occ"^^xsd:string ;
+                               :hasRGB "41_31_169"^^xsd:string ;
+                               :hasVentilationAch "0.0"^^xsd:float ;
+                               :hasVentilationPerArea "0.05"^^xsd:float ;
+                               :hasVentilationPerPerson "0.0"^^xsd:float ;
+                               :hasVentilationPriSpcType "Public Spaces"^^xsd:string ;
+                               :hasVentilationSecSpcType "Corridors and utilities"^^xsd:string .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#Roof_Insulation_21
+:Roof_Insulation_21 rdf:type owl:NamedIndividual ,
+                             :Material ;
+                    :hasConductivity "0.33974013"^^xsd:float ;
+                    :hasDensity "16.54341"^^xsd:float ;
+                    :hasResistance "24.393356"^^xsd:float ;
+                    :hasRoughness "MediumRough"^^xsd:string ;
+                    :hasSolar_Absorptance "0.7"^^xsd:float ;
+                    :hasSpecific_Heat "0.19986625"^^xsd:float ;
+                    :hasThermal_Absorptance "0.9"^^xsd:float ;
+                    :hasThickness "8.287401"^^xsd:float ;
+                    :hasVisible_Absorptance "0.7"^^xsd:float .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#Roof_Membrane
+:Roof_Membrane rdf:type owl:NamedIndividual ,
+                        :Material ;
+               :hasConductivity "1.1093554"^^xsd:float ;
+               :hasDensity "69.99985"^^xsd:float ;
+               :hasResistance "0.33714688"^^xsd:float ;
+               :hasRoughness "VeryRough"^^xsd:string ;
+               :hasSolar_Absorptance "0.7"^^xsd:float ;
+               :hasSpecific_Heat "0.348715"^^xsd:float ;
+               :hasThermal_Absorptance "0.9"^^xsd:float ;
+               :hasThickness "0.37401575"^^xsd:float ;
+               :hasVisible_Absorptance "0.7"^^xsd:float .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#Theoretical_Glass_207
+:Theoretical_Glass_207 rdf:type owl:NamedIndividual ,
+                                :Material ;
+                       :hasBack_Side_Infrared_Hemispherical_Emissivity "0.9"^^xsd:float ;
+                       :hasBack_Side_Solar_Relectance_At_Normal_Incidence "0.6189"^^xsd:float ;
+                       :hasBack_Side_Visible_Relectance_At_Normal_Incidence "0.51"^^xsd:float ;
+                       :hasConductivity "0.09221517"^^xsd:float ;
+                       :hasDirt_Correction_Factor_For_Solar_And_Visible_Transmittance "1.0"^^xsd:float ;
+                       :hasFront_Side_Infrared_Hemispherical_Emissivity "0.9"^^xsd:float ;
+                       :hasFront_Side_Solar_Relectance_At_Normal_Incidence "0.6189"^^xsd:float ;
+                       :hasFront_Side_Visible_Relectance_At_Normal_Incidence "0.51"^^xsd:float ;
+                       :hasInfrared_Transmittance_At_Normal_Incidence "0.0"^^xsd:float ;
+                       :hasMaterial_Type "StandardGlazing"^^xsd:string ;
+                       :hasOptical_Data_Type "SpectralAverage"^^xsd:string ;
+                       :hasResistance "10.844202"^^xsd:float ;
+                       :hasSolar_Transmittance_At_Normal_Incidence "0.3311"^^xsd:float ;
+                       :hasThermal_Absorptance "0.11811024"^^xsd:float ;
+                       :hasVisible_Transmittance_At_Normal_Incidence "0.44"^^xsd:float .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#Wall_Insulation_40
+:Wall_Insulation_40 rdf:type owl:NamedIndividual ,
+                             :Material ;
+                    :hasConductivity "0.29952598"^^xsd:float ;
+                    :hasDensity "5.6809444"^^xsd:float ;
+                    :hasResistance "10.436438"^^xsd:float ;
+                    :hasRoughness "MediumRough"^^xsd:string ;
+                    :hasSolar_Absorptance "0.5"^^xsd:float ;
+                    :hasSpecific_Heat "0.19991401"^^xsd:float ;
+                    :hasThermal_Absorptance "0.9"^^xsd:float ;
+                    :hasThickness "3.1259842"^^xsd:float ;
+                    :hasVisible_Absorptance "0.5"^^xsd:float .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#1IN_Stucco
+<http://www.urbanpatchtopologyontology.org/upto#1IN_Stucco> rdf:type owl:NamedIndividual ,
+                                                                     :Material ;
+                                                            :hasConductivity "4.796576"^^xsd:float ;
+                                                            :hasDensity "115.99115"^^xsd:float ;
+                                                            :hasResistance "0.20766127"^^xsd:float ;
+                                                            :hasRoughness "Smooth"^^xsd:string ;
+                                                            :hasSolar_Absorptance "0.92"^^xsd:float ;
+                                                            :hasSpecific_Heat "0.19991401"^^xsd:float ;
+                                                            :hasThermal_Absorptance "0.9"^^xsd:float ;
+                                                            :hasThickness "0.996063"^^xsd:float ;
+                                                            :hasVisible_Absorptance "0.92"^^xsd:float .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#1/2IN_Gypsum
+<http://www.urbanpatchtopologyontology.org/upto#1/2IN_Gypsum> rdf:type owl:NamedIndividual ,
+                                                                       :Material ;
+                                                              :hasConductivity "1.1093554"^^xsd:float ;
+                                                              :hasDensity "48.999706"^^xsd:float ;
+                                                              :hasResistance "0.45071214"^^xsd:float ;
+                                                              :hasRoughness "Smooth"^^xsd:string ;
+                                                              :hasSolar_Absorptance "0.4"^^xsd:float ;
+                                                              :hasSpecific_Heat "0.1982421"^^xsd:float ;
+                                                              :hasThermal_Absorptance "0.9"^^xsd:float ;
+                                                              :hasThickness "0.5"^^xsd:float ;
+                                                              :hasVisible_Absorptance "0.4"^^xsd:float .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#189.1-2009
+<http://www.urbanpatchtopologyontology.org/upto#189.1-2009> rdf:type owl:NamedIndividual ,
+                                                                     :Templates .
+
+
+###  http://www.urbanpatchtopologyontology.org/upto#8IN_Concrete_HW
+<http://www.urbanpatchtopologyontology.org/upto#8IN_Concrete_HW> rdf:type owl:NamedIndividual ,
+                                                                          :Material ;
+                                                                 :hasConductivity "11.992133"^^xsd:float ;
+                                                                 :hasDensity "140.02591"^^xsd:float ;
+                                                                 :hasResistance "0.6674323"^^xsd:float ;
+                                                                 :hasRoughness "MediumRough"^^xsd:string ;
+                                                                 :hasSolar_Absorptance "0.65"^^xsd:float ;
+                                                                 :hasSpecific_Heat "0.19991401"^^xsd:float ;
+                                                                 :hasThermal_Absorptance "0.9"^^xsd:float ;
+                                                                 :hasThickness "8.003937"^^xsd:float ;
+                                                                 :hasVisible_Absorptance "0.65"^^xsd:float .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
