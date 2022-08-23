@@ -1,4 +1,4 @@
-# UPTO
+# UPTO (UrbanPatch Topology Ontology)
 
 This repo provides  four code samples to edit or use UPTO-based dataset.
 
