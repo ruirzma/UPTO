@@ -29,7 +29,7 @@ This repo provides  four code samples to edit or use UPTO-based multi-city digit
 
 ## Dataset
 A dataset of 30 major cities in the United States based on the UPTO structure. 
-Available from [FigShare], where each city are saved in a separate TTL (Turtle Syntax) file. (https://doi.org/10.6084/m9.figshare.20799637.v1)
+Available from [FigShare](https://doi.org/10.6084/m9.figshare.20799637.v1), where each city are saved in a separate TTL (Turtle Syntax) file. 
 
 
 
