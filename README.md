@@ -5,7 +5,10 @@ This repo provides  four code samples to edit or use UPTO-based multi-city digit
 ![ONTO](UPTO.png "ONTO")
 <p align = "center"> UrbanPatch Topology Ontology</p>
 
+<p align = "center">    </p>
 
+![workflow](Patch_demo.png "workflow")
+<p align = "center">Physical objects to be considered in a target UrbanTile simulation</p>
 
 
 
@@ -16,11 +19,7 @@ This repo provides  four code samples to edit or use UPTO-based multi-city digit
   
   
   
-  
-
-
-![workflow](Patch_demo.png "workflow")
-<p align = "center">Physical objects to be considered in a target UrbanTile simulation</p>
+ 
 
 
 ## Main dependencies 
