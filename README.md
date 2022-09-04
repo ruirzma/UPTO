@@ -1,6 +1,6 @@
 # UrbanPatch Topology Ontology (UPTO)
 
-This repo provides  four code samples to edit or use UPTO-based dataset.
+This repo provides  four code samples to edit or use UPTO-based multi-city digitized building models dataset.
 
   * `ConPatchForTile.py`: construct UrbanPatch individuals for UrbanTile objects when changing the receptive radius.
   * `ConPatchForBuilding.py`: construct UrbanPatch individuals for Building objects for a given receptive radius.
