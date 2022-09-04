@@ -2,7 +2,7 @@
 
 This repo provides  four code samples to edit or use UPTO-based multi-city digitized building models dataset.
 
-![workflow](UPTO.png "workflow")
+![ONTO](UPTO.png "ONTO")
 <p align = "center"> UrbanPatch Topology Ontology</p>
 
 
@@ -10,6 +10,10 @@ This repo provides  four code samples to edit or use UPTO-based multi-city digit
   * `ConPatchForBuilding.py`: construct UrbanPatch individuals for Building objects for a given receptive radius.
   * `GenMicroclimate.py`: generate the UrbanTile-scale microclimate.
   * `ConPatchForBuilding.py`: generate UrbanTile-scale EnergyPlus IDF file.
+
+
+![workflow](Patch_demo.png "workflow")
+<p align = "center">Physical objects to be considered in a target UrbanTile simulation</p>
 
 
 ## Main dependencies 
