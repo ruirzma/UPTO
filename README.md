@@ -2,16 +2,10 @@
 
 This repo provides  four code samples to edit or use UPTO-based multi-city digitized building models dataset.
 
-![ONTO](UPTO.png "ONTO")
+![Ontology](UPTO.png "Ontology")
 <p align = "center"> UrbanPatch Topology Ontology</p>
 
-<p align = "center">    </p>
-<p align = "center">    </p>
 
- ![workflow](Patch_demo.png "workflow")
-<p align = "center">Physical objects to be considered in a target UrbanTile simulation</p>
-
-  
  ## Code samples
   
   * `ConPatchForTile.py`: construct UrbanPatch individuals for UrbanTile objects when changing the receptive radius.
