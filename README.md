@@ -15,7 +15,7 @@ This repo provides  four code samples to edit or use UPTO-based multi-city digit
 
 
 ## Dataset
-Ma, Rui; Li, Xin; Chen, jiayu (2022): A multi-city digitized building models dataset. figshare. Dataset. https://doi.org/10.6084/m9.figshare.20799637
+Ma, Rui; Li, Xin; Chen, jiayu (2022): A tiled multi-city urban objects dataset for city-scale building energy simulation. https://doi.org/10.6084/m9.figshare.20799637
 
 ## Main dependencies 
 [RDFLib](https://pypi.org/project/rdflib/) 
