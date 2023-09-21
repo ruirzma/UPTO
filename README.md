@@ -17,6 +17,24 @@ This repo provides  four code samples to edit or use UPTO-based multi-city digit
 ## Dataset
 Ma, Rui; Li, Xin; Chen, jiayu (2022): A tiled multi-city urban objects dataset for city-scale building energy simulation. https://doi.org/10.6084/m9.figshare.20799637
 
+### Citation
+If you use UPTO in scientific work, I kindly ask you to cite it:
+
+```bibtex
+@article{Ma2023,
+doi = {10.1038/s41597-023-02261-5},
+issn = {2052-4463},
+journal = {Scientific Data},
+month = {jun},
+number = {1},
+pages = {352},
+title = {{A tiled multi-city urban objects dataset for city-scale building energy simulation}},
+url = {https://www.nature.com/articles/s41597-023-02261-5},
+volume = {10},
+year = {2023}
+}
+```
+
 ## Main dependencies 
 [RDFLib](https://pypi.org/project/rdflib/) 
 [Geomeppy](https://pypi.org/project/geomeppy/) 
